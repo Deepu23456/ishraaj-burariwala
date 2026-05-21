@@ -45,7 +45,7 @@ export default function About() {
                         </div>
 
                         <div className="stat-box">
-                            <h3>46+</h3>
+                            <h3>1L+</h3>
                             <p>YouTube Views</p>
                         </div>
 
