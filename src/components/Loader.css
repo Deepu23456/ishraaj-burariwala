@@ -1,0 +1,85 @@
+.loader {
+    position: fixed;
+    inset: 0;
+    background: #050505;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 99999;
+
+    overflow: hidden;
+}
+
+.loader-glow {
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    background: rgba(212, 175, 55, 0.15);
+
+    filter: blur(120px);
+
+    animation: pulseGlow 2s infinite ease-in-out;
+}
+
+.loader-logo {
+    width: 170px;
+
+    position: relative;
+    z-index: 2;
+
+    animation:
+        logoReveal 1.6s ease forwards;
+}
+
+
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes logoReveal {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+
+@keyframes pulseGlow {
+    0% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+
+    50% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+    .loader-logo {
+        width: 130px;
+    }
+
+}

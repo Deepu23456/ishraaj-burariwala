@@ -1,0 +1,222 @@
+.about {
+    position: relative;
+    overflow: hidden;
+    background: var(--bg);
+}
+
+/* Watermark */
+.about-watermark {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-10%, -50%) rotate(-10deg);
+    font-size: 7rem;
+    font-weight: 900;
+    font-style: italic;
+    font-family: "Georgia", "Times New Roman", serif;
+    color: rgba(255, 255, 255, 0.035);
+    letter-spacing: 12px;
+    z-index: 0;
+    pointer-events: none;
+    white-space: nowrap;
+    text-transform: uppercase;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Left Image */
+.about-left {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.about-img-box {
+    width: 360px;
+    height: 450px;
+    border-radius: 22px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    position: relative;
+    box-shadow: 0px 0px 40px rgba(212, 175, 55, 0.12);
+}
+
+.about-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s ease;
+}
+
+.about-img-box:hover img {
+    transform: scale(1.08);
+}
+
+/* Right Content */
+.about-right {
+    flex: 1.3;
+}
+
+.about-title {
+    font-size: 2.4rem;
+    font-weight: 900;
+    margin-bottom: 18px;
+}
+
+.about-title span {
+    color: var(--accent);
+    text-shadow: 0px 0px 20px rgba(212, 175, 55, 0.25);
+}
+
+.about-desc {
+    font-size: 1rem;
+    color: var(--text2);
+    line-height: 1.8;
+    margin-bottom: 22px;
+}
+
+/* Tags */
+.about-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.about-tags span {
+    padding: 8px 14px;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: white;
+    backdrop-filter: blur(10px);
+    transition: 0.3s ease;
+}
+
+.about-tags span:hover {
+    transform: translateY(-2px);
+    border-color: rgba(212, 175, 55, 0.5);
+    color: var(--accent);
+}
+
+/* Stats */
+.about-stats {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+
+.stat-box {
+    flex: 1;
+    min-width: 140px;
+    padding: 16px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    text-align: center;
+    transition: 0.35s ease;
+}
+
+.stat-box:hover {
+    transform: translateY(-5px);
+    border-color: rgba(212, 175, 55, 0.55);
+    box-shadow: 0px 0px 20px rgba(212, 175, 55, 0.15);
+}
+
+.stat-box h3 {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: var(--accent);
+    margin-bottom: 6px;
+}
+
+.stat-box p {
+    font-size: 0.9rem;
+    color: var(--text2);
+}
+
+/* Quote */
+.about-quote {
+    padding: 16px 18px;
+    border-left: 3px solid var(--accent);
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 12px;
+    margin-bottom: 28px;
+}
+
+.about-quote p {
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    line-height: 1.6;
+}
+
+/* Button */
+.about-btn {
+    display: inline-block;
+    padding: 12px 22px;
+    border-radius: 35px;
+    background: var(--accent);
+    color: black;
+    font-weight: 800;
+    transition: 0.35s ease;
+}
+
+.about-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 0px 22px rgba(212, 175, 55, 0.45);
+}
+
+/* Responsive */
+@media (max-width: 950px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-right {
+        flex: 1;
+    }
+
+    .about-img-box {
+        width: 320px;
+        height: 400px;
+    }
+
+    .about-quote {
+        text-align: left;
+    }
+
+    .about-stats {
+        justify-content: center;
+    }
+
+    .about-tags {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .about-title {
+        font-size: 1.8rem;
+    }
+
+    .about-img-box {
+        width: 280px;
+        height: 380px;
+    }
+
+    .about-watermark {
+        font-size: 4rem;
+    }
+}
