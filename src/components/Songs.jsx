@@ -158,6 +158,7 @@ export default function Songs() {
                                 <img
                                     src={song.cover}
                                     alt={song.title}
+                                    loading="lazy"
                                 />
 
                                 <div className="song-overlay-modern">

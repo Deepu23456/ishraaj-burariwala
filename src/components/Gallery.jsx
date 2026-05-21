@@ -69,7 +69,7 @@ export default function Gallery() {
                             key={index}
                             onClick={() => handleOpen(index)}
                         >
-                            <img src={img.src} alt={img.title} />
+                            <img src={img.src} alt={img.title} loading="lazy" />
                             <div className="gallery-overlay">
                                 <p>{img.title}</p>
                             </div>
@@ -95,6 +95,7 @@ export default function Gallery() {
                                 src={images[current].src}
                                 alt={images[current].title}
                                 className="gallery-modal-img"
+                                loading="lazy"
                             />
 
                             <button className="gallery-next" onClick={nextImage}>

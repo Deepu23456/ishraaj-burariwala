@@ -5,7 +5,7 @@ export default function Hero() {
     return (
         <section className="hero" id="home">
             {/* Background Video */}
-            <video className="hero-video" autoPlay loop muted playsInline>
+            <video className="hero-video" autoPlay loop muted playsInline preload="metadata">
                 <source src={heroVideo} type="video/mp4" />
             </video>
 

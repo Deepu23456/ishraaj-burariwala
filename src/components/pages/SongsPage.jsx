@@ -144,7 +144,7 @@ export default function SongsPage() {
                         >
                             {/* IMAGE */}
                             <div className="song-page-img">
-                                <img src={song.image} alt={song.title} />
+                                <img src={song.image} alt={song.title} loading="lazy" />
 
                                 <div className="song-img-overlay">
                                     <span>Official Release</span>
