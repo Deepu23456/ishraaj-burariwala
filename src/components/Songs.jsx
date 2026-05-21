@@ -7,7 +7,7 @@ import "./Songs.css";
 
 import gadaafi from "../assets/gadaafi-cover.png";
 import taqdeer from "../assets/taqdeer-cover.png";
-import thanThan from "../assets/than-than-karke-cover.png";
+import thanThan from "../assets/Than-Than-karke-cover.png";
 import valentine from "../assets/valentine-cover.png";
 import dagabaaz from "../assets/dagabaaz-cover.jpg";
 
